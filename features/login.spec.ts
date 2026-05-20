@@ -9,7 +9,7 @@ test.describe('OrangeHRM - authentication', () => {
     await dashboardPage.verify_pageTitle(expected.labels.pageTitle);
   });
 
-  test('should reject invalid credentials and empty password', async ({ loginPage }) => {
+  test('should reject invalid credentials and empty password 12345', async ({ loginPage }) => {
     await loginPage.step_navigate();
     await loginPage.step_login(users.invalid);
     await loginPage.verify_errorMessage(expected.errors.invalidCredentials);
